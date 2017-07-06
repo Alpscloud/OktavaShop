@@ -1,0 +1,57 @@
+@import '../_helpers/_vars.styl'
+
+.nav
+	width 100%
+	background $accent-color
+	&__list
+		position relative
+		text-align left
+		
+		&--item
+			display inline-block
+			vertical-align middle
+			margin-right 35px
+			padding 23px 0
+			&:hover
+				> ul
+					display block
+			
+			&:last-child
+				margin-right 0
+		&--link
+			text-transform uppercase
+			color $light-color
+			font 1.14em $Bold
+			&:hover
+				color #2f2f2f
+				
+		&--dropdown
+			position absolute
+			top 100%
+			left 0
+			right 0
+			width 100%
+			padding 25px 70px 0 70px
+			border-top 5px solid #2f2f2f
+			z-index 5
+			background-size cover
+			background-repeat no-repeat
+			background-repeat center center
+			display none
+			li
+				display inline-block
+				vertical-align middle
+				margin-right 35px
+				margin-bottom 20px
+			a
+				text-transform uppercase
+				color #2f2f2f
+				font 1.14em $Bold 
+				&:hover
+					text-decoration underline
+			&--inverness
+				background-image url('../img/invernes-menu-bg.png')
+			&--rimpler
+				background-image url('../img/rimpler-menu-bg.png')
+			&--isabelle
+				background-image url('../img/isabelle-menu-bg.png')

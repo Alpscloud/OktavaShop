@@ -85,6 +85,10 @@ gulp.task('jsLibs', function () {
 gulp.task('jsCommon', function () {
 	return gulp.src('./dist/js/common.js')
 		.pipe(uglify())
+			.on('error', function(err) {
+				console.log(err.message);
+				this.end();
+			})
 		.pipe(rename({
 			suffix: '.min'
 		}))

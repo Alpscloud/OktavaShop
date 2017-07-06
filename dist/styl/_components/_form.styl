@@ -1,5 +1,48 @@
 @import '../_helpers/_vars.styl'
 
+.form__search
+	&--wrapp
+		position relative
+	&--input
+		display inline-block
+		width 100%
+		padding 5px 20px
+		height 40px
+		text-align left
+		background #f2f2f2
+		border 1px solid $light-sect-bg
+		-webkit-appearance none
+		-moz-appearance none
+		-o-appearance none
+		-ms-appearance none
+		appearance none
+		&::-ms-clear
+			display none
+
+		
+		&:hover,
+		&:focus
+			border-color $accent-color
+			-webkit-appearance none
+			-moz-appearance none
+			-o-appearance none
+			-ms-appearance none
+			appearance none
+	&--btn
+		display inline-block
+		width 22px
+		height 22px
+		position absolute
+		z-index 2
+		top 50%
+		transform translateY(-50%)
+		right 10px
+		background url('../img/icons/svg/search-ic.svg') center no-repeat
+		background-size cover
+		
+
+
+
 
 input.contact__form--input::-webkit-input-placeholder
 	text-transform uppercase

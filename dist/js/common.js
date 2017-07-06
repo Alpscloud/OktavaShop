@@ -69,11 +69,11 @@ $(document).ready(function() {
 
 	var maxheight = 0;
 
-	$(".selector").each(function() {
+	$(".adv__item--title").each(function() {
 	  	if($(this).height() > maxheight) { maxheight = $(this).height(); }
 	});
 
-	$(".selector").height(maxheight);
+	$(".adv__item--title").height(maxheight);
 
 
 	// ========= O w l   c a r o u s e l ===========
@@ -90,7 +90,30 @@ $(document).ready(function() {
 	//     autoplayTimeout: 2500,
 	//     autoplayHoverPause: true	   
 	// });
-
+	$('#sliderNew').owlCarousel({
+	    items:4,
+	    loop:true,
+	    autoHeight: false,
+	    dots:false,
+	    navText:['',''],
+	    nav:true,
+	    navElement: 'button',
+	    navContainer: '#navigationNew',
+	    navSpeed:300
+	   
+	});
+	$('#sliderHits').owlCarousel({
+	    items:4,
+	    loop:true,
+	    autoHeight: false,
+	    dots:false,
+	    navText:['',''],
+	    nav:true,
+	    navElement: 'button',
+	    navContainer: '#navigationHits',
+	    navSpeed:300
+	   
+	});
 	// ========= =========== =========== ===========
 
 	// ========= D i s a b l e   m a p    s c r o l l i n g ===========

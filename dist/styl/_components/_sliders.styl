@@ -1,0 +1,109 @@
+@import '../_helpers/_vars.styl'
+
+.slider__header
+	position relative
+.slider__title
+	text-transform uppercase
+	color $light-color
+	font 1.57em $Bold
+	border-bottom 5px solid $accent-color
+	margin-bottom 40px
+	span
+		display inline-block
+		padding 12px 0 7px 0
+		width 100%
+		max-width 230px
+		background-color $accent-color
+		
+
+
+.slider__navigation
+	position absolute
+	right 0
+	top 6px
+	.owl-prev,
+	.owl-next
+		display inline-block
+		width 29px
+		height 29px
+		background url('../img/icons/arrows-ic-sprite.png') no-repeat
+		transition all .23s ease-in-out
+		opacity .4
+		&:hover
+			opacity 1
+	.owl-prev
+		background-position 0 0
+		margin-right 5px
+	.owl-next
+		background-position -31px 0
+			
+	
+.slider__item
+	background-color $light-bg
+	padding 15px 20px
+	position relative
+	text-align center
+	width 100%
+	max-width 270px
+	&--img
+		display inline-block
+		max-width 130px
+		margin 0 auto
+	&--title
+		margin 12px 0
+		text-transform uppercase
+		font 1.285em $Bold
+		a
+			color #212121
+			&:hover
+				text-decoration underline
+
+.slider__action
+	margin-top 15px
+	&--link
+		display inline-block
+		margin-right 15px
+		&:last-child
+			margin-right 0
+		svg
+			display inline-block
+			width 21px
+			height 21px
+			fill #535353
+			transition all .23s ease-in-out
+		&:hover
+			svg
+				fill $primary-color
+.unit
+	position absolute
+	top 0
+	left 0
+	display inline-block
+	padding 5px 10px
+	text-transform uppercase
+	color $light-color
+	font 1em $Bold
+	text-align center
+	z-index 2
+	&__sale
+		background-color $primary-color
+	&__new
+		background-color $accent-color
+	&__hit
+		background-color $hit-color
+		
+.status
+	color #707070
+	font 1.14em $Reg
+
+.price
+	font 1.57em $Bold
+	color #2f2f2f
+	margin 17px 0
+	&__old
+		display inline-block
+		margin-left 10px
+		color #b8b8b8
+		font-family $Reg
+		text-decoration line-through
+	

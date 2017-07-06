@@ -1,1 +1,102 @@
 @import '../_helpers/_vars.styl'
+
+// Choice cat
+.choice__cat--item
+	display block
+	padding-bottom 5px
+	transition all .23s ease-in-out
+	border-bottom 1px solid transparent
+	&:hover
+		border-color $dark-color
+	img
+		display block
+		
+
+// Advantages 
+.sect__adv
+	background url('../img/advantages-bg.png') left center no-repeat
+	background-size cover
+	color $light-color
+	
+.adv__row
+	display flex
+	justify-content space-between
+	align-items stretch
+	flex-wrap wrap
+
+.adv__item
+	width 170px
+	flex 1 0 170px
+	padding 0 15px
+	&--img
+		display inline-block
+		width 170px
+		height 170px
+		background rgba($light-color, .5)
+		position relative
+		
+		img
+			display block
+			width 105px
+			height 105px
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+			
+	&--title
+		text-transform uppercase
+		margin 23px 0
+		font 1.28em $Bold
+		// word-wrap break-word
+	p
+		font-family $Bold
+	
+// News
+.sect__news
+	.btn
+		margin-top 35px
+.article__item
+	&--title
+		text-transform uppercase
+		font 1.28em $Bold
+		margin 20px 0
+		a
+			color $dark-color
+			&:hover
+				text-decoration underline
+		&--top
+			margin 0 0 20px 0
+	
+	p
+		margin-bottom 10px
+	&--body
+		&--bottom
+			margin-bottom 20px
+
+.article__more
+	text-transform uppercase
+	color $accent-color
+	font 1em $Bold
+	border-bottom 1px solid #edf4d7
+	&:hover
+		border-color $accent-color
+		
+// Seo
+.sect__seo
+	background-color $light-bg
+	p
+		line-height 1.8		
+
+//subscr
+.subscr__title
+	text-transform uppercase
+	color #2e2e2e
+	font 1.57em $Bold
+	margin-bottom 18px
+.subscr__slogan
+	font 1.14em $Bold
+	color #929292 
+
+			
+		

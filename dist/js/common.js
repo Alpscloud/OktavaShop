@@ -24,6 +24,38 @@ window.addEventListener('DOMContentLoaded', function() {
 // ============================================================
 
 // ========= ========= ========= JQUERY =========== ========= =========
+// $(document).ready(function() {
+// 		(function($){				
+// 	jQuery.fn.lightTabs = function(options){
+
+// 		var createTabs = function(){
+// 			tabs = this;
+// 			i = 0;
+			
+// 			showPage = function(i){
+// 				$(tabs).find('.tabs__content').children('div').hide();
+// 				$(tabs).find('.tabs__content').children('div').eq(i).show();
+// 				$(tabs).find(".tabs__list").children('li').removeClass("active");
+// 				$(tabs).find(".tabs__list").children('li').eq(i).addClass("active");
+// 			}
+								
+// 			showPage(0);				
+			
+// 			$(tabs).find(".tabs__list").children('li').each(function(index, element){
+// 				$(element).attr("data-page", i);
+// 				i++;                        
+// 			});
+			
+// 			$(tabs).find(".tabs__list").children('li').click(function(){
+// 				showPage(parseInt($(this).attr("data-page")));
+// 			});				
+// 		};		
+// 		return this.each(createTabs);
+// 	};	
+// })(jQuery);
+
+// $(".tabs").lightTabs();
+// });
 $(document).ready(function() {
 	//  ========= M a i n   v a r i a b l e s =========
 	var html = $('body').width();
@@ -57,13 +89,18 @@ $(document).ready(function() {
 	// Hamburger mobile menu
 	$('#hamburger').on('click', function() {
 		if(html < 768) {
-			$('.nav__list').slideToggle(300);
+			$('.nav__list').stop().slideToggle(300);
 		}
 	});
 	$('.aside__title').on('click', function() {
 		if(html < 768) {
-			$(this).next().slideToggle(300);
+			$(this).next().stop().slideToggle(300);
 		}
+	});
+	$('.tabs__title').on('click', function() {
+	
+		$(this).next().stop().slideToggle(500);
+	
 	});
 	// ========= =========== =========== ===========
 
@@ -88,21 +125,25 @@ $(document).ready(function() {
 
 	$(".adv__item--title").height(maxheight);
 
+	// Contact Tabs
+
+	$('.js-tab-content').not(":first").hide();
+
+	$(".js-tab-btn").click(function() {
+		$(".js-tab-btn").removeClass("active").eq($(this).index()).addClass("active");
+		$(".js-tab-content").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
+
+	$('.js-tab-btn').click(function() {
+		if(html < 768) {
+			$(this).parent().parent().stop().slideToggle(500);
+		}
+	});
+	// ========= =========== =========== ===========
+
 
 	// ========= O w l   c a r o u s e l ===========
-	// $('#slider').owlCarousel({
-	// 	loop:true,
-	//     nav:true,
-	//     dots: true,
-	//     navText: ['',''],
-	//     margin:20,
-	//     mouseDrag: true,
-	//     touchDrag: true,
-	//     items:1,
-	//     autoplay: true,
-	//     autoplayTimeout: 2500,
-	//     autoplayHoverPause: true	   
-	// });
+
 	$('#sliderNew').owlCarousel({
 	    loop:true,
 	    autoHeight: false,
@@ -159,6 +200,7 @@ $(document).ready(function() {
 	   
 	});
 	// ========= =========== =========== ===========
+
 
 	// ========= D i s a b l e   m a p    s c r o l l i n g ===========
 	var onMapMouseleaveHandler = function (event) {

@@ -52,8 +52,7 @@
 				border-color $accent-color
 			
 	&__feedback
-		padding-bottom 25px
-		border-bottom 1px solid $light-sect-bg
+		
 		&--input
 			border 1px solid $light-sect-bg
 			background-color $light-bg
@@ -64,11 +63,20 @@
 			display block
 			width 100%
 			padding 10px 20px
+			&:hover,
+			&:focus
+				border-color $accent-color
 		textarea
 			resize vertical
 			min-height 130px
 			margin-bottom 35px
 			font-size 1.14em
+	&__contacts
+		.form__feedback--input
+			border-color transparent
+			&:hover,
+			&:focus
+				border-color $accent-color
 
 .form__subscr--input::-webkit-input-placeholder
 	color #717171

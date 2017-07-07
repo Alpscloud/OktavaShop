@@ -1,0 +1,61 @@
+.compare
+	overflow-x auto
+	&__table
+		width 100%
+		&--tr
+			
+			&:nth-child(odd)
+				background-color $light-bg
+		&--td
+			padding 10px
+			color #2f2f2f
+			width 20%
+			text-align center
+			&--bold
+				font-family $Bold
+			&--product
+				padding-left 25px
+				padding-right 25px
+				
+.product
+	&__item
+		&--visual
+			display table
+			img
+				display table-cell
+				vertical-align middle
+				max-width 40px
+			h3
+				display table-cell
+				vertical-align middle
+				padding-left 8px
+				text-align left
+				a
+					text-transform uppercase
+					color #212121
+					font .9em $Bold
+					&:hover
+						text-decoration underline
+	&__action
+		display flex
+		justify-content space-between
+		align-items center
+		flex-wrap wrap
+		margin-top 15px
+		margin-bottom 5px
+		.price
+			margin 0
+			font-size 1.285em
+		&--link
+			width 21px
+			height 21px
+			svg
+				fill $accent-color
+				transition all .23s ease-in-out
+			&:hover
+				svg
+					fill $primary-color
+			&--delete
+				svg
+					fill $dark-color
+	

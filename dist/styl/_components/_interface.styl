@@ -73,3 +73,27 @@ $mwidth = 300px
 		margin-bottom 3px
 		&:last-child
 			margin-bottom 0
+			
+.mobile__arrow
+	display flex
+	justify-content space-between
+	align-items center
+	padding 10px 20px 10px 0
+	.info
+		
+		font-size .8em 
+
+.arrow
+	width 20px
+	height 20px
+	border 2px solid $accent-color
+	display inline-block
+	border-left none
+	border-bottom none
+	transform rotate(-135deg)
+	animation arrows 1.5s infinite			
+
+@keyframes arrows 
+	to 
+		transform translateX(-100%) rotate(-135deg)
+		opacity 0

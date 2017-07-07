@@ -1,10 +1,22 @@
 .brand__categories
 	&--link
 		display block
-		width 100%
 		
 		overflow hidden
 		margin-bottom 45px
+		&:hover
+			.brand__categories
+				&--overlay
+					opacity 1
+				&--title
+					text-decoration underline
+	&--inverness
+		text-align center
+		.brand__categories--link
+			display inline-block
+		
+		.brand__categories--thumb
+			margin 0 auto
 	
 	&--thumb
 		display block
@@ -46,12 +58,7 @@
 		font-size 1.285em
 		text-align center
 	
-	&:hover
-		.brand__categories
-			&--overlay
-				opacity 1
-			&--title
-				text-decoration underline
+	
 
 
 .nickname

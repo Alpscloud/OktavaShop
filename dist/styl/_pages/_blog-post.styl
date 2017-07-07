@@ -1,0 +1,48 @@
+@import '../_helpers/_vars.styl'
+
+.blog__posts
+	.article__item--single
+		border-bottom none
+		
+.share
+	color $footer-bg
+	margin-bottom 35px
+	
+	&__text
+		font-size .9em
+		padding-bottom 5px
+		border-bottom 1px solid $light-sect-bg
+		margin-bottom 5px
+
+	&__list
+		text-align right
+		&--item
+			display inline-block
+			margin-right 5px
+			&:last-child
+				margin-right 0
+		&--link
+			opacity .4
+			font-size 26px
+			color inherit
+			&:hover
+				opacity 1
+	
+.back
+	padding-top 10px
+	&__link
+		color $accent-color
+		position relative
+		text-transform uppercase
+		font .9em $Bold
+		border-bottom 1px solid #edf4d7
+		&:hover
+			border-color $accent-color
+		&:before
+			content ''
+			display inline-block
+			margin-right 5px
+			width 14px
+			height 12px
+			background url('../img/icons/svg/right-green-arrow-ic.svg') center no-repeat
+			transform rotate(-180deg)

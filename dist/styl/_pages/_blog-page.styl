@@ -29,21 +29,7 @@
 	&--info
 		margin-bottom 25px
 		span
-			display inline-block
-			vertical-align middle
 			margin-right 15px
-			position relative
-			padding-left 25px
-			color $dark-color
-			&:before
-				content ''
-				position absolute
-				top 50%
-				transform translateY(-50%)
-				left 0
-				width 18px
-				height 18px
-				display inline-block
 			&:last-child
 				margin-right 0
 
@@ -55,6 +41,22 @@
 	&:hover
 		border-color $accent-color
 
+.time,
+.comment
+	display inline-block
+	vertical-align middle
+	position relative
+	padding-left 25px
+	color $dark-color
+	&:before
+		content ''
+		position absolute
+		top 50%
+		transform translateY(-50%)
+		left 0
+		width 18px
+		height 18px
+		display inline-block
 .time
 	&:before
 		background url('../img/icons/svg/time-ic.svg') center no-repeat

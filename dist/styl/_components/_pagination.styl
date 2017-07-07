@@ -1,1 +1,25 @@
 @import '../_helpers/_vars.styl'
+
+.pagination
+	text-align right
+	&__comments
+		background-color $light-bg
+		padding 12px 0
+		text-align center
+		margin-bottom 30px
+	
+	&__list
+		&--item
+			display inline-block
+			margin-right 18px
+			&:last-child
+				margin-right 0
+		&--link
+			text-decoration underline
+			color #2f2f2f
+			&--arrow
+				text-decoration none
+			&.active
+				text-decoration none
+			&:hover
+				text-decoration none

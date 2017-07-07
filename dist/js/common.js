@@ -60,6 +60,11 @@ $(document).ready(function() {
 			$('.nav__list').slideToggle(300);
 		}
 	});
+	$('.aside__title').on('click', function() {
+		if(html < 768) {
+			$(this).next().slideToggle(300);
+		}
+	});
 	// ========= =========== =========== ===========
 
 	// ========= Banner Slider ===========

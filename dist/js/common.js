@@ -54,6 +54,14 @@ $(document).ready(function() {
 	});	
 	// ========= =========== =========== ===========
 
+	// Hamburger mobile menu
+	$('#hamburger').on('click', function() {
+		if(html < 768) {
+			$('.nav__list').slideToggle(300);
+		}
+	});
+	// ========= =========== =========== ===========
+
 	// ========= Banner Slider ===========
 	var swiper = new Swiper('.swiper-container', {
 
@@ -91,7 +99,6 @@ $(document).ready(function() {
 	//     autoplayHoverPause: true	   
 	// });
 	$('#sliderNew').owlCarousel({
-	    items:4,
 	    loop:true,
 	    autoHeight: false,
 	    dots:false,
@@ -99,7 +106,23 @@ $(document).ready(function() {
 	    nav:true,
 	    navElement: 'button',
 	    navContainer: '#navigationNew',
-	    navSpeed:300
+	    navSpeed:300,
+	    responsive:{
+	    	1000: {
+	    		items: 4
+	    	},
+	    	768: {
+	    		items: 3
+	    	},
+
+	    	500: {
+	    		items: 2
+	    	},
+	    	320: {
+	    		items: 1,
+	    		center:true
+	    	}
+	    }
 	   
 	});
 	$('#sliderHits').owlCarousel({
@@ -111,7 +134,23 @@ $(document).ready(function() {
 	    nav:true,
 	    navElement: 'button',
 	    navContainer: '#navigationHits',
-	    navSpeed:300
+	    navSpeed:300,
+	    responsive:{
+	    	1000: {
+	    		items: 4
+	    	},
+	    	768: {
+	    		items: 3
+	    	},
+
+	    	500: {
+	    		items: 2
+	    	},
+	    	320: {
+	    		items: 1,
+	    		center:true
+	    	}
+	    }
 	   
 	});
 	// ========= =========== =========== ===========

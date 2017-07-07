@@ -9,3 +9,169 @@
 +min-screen-height(minHeight)
 */
 
++max-screen(1200px)
+	// Main page
+	.nav__list--item
+		margin-right 20px
+	
+	.adv__item--title
+		font-size 1em
+
+
++max-screen(1000px)
+	// Main page
+	.menu__list
+		text-align left
+		&--item
+			padding 2px 5px
+	.header__action 
+		margin 20px 0
+	
+	.nav__list
+		&--dropdown 
+			a
+				font-size 1em
+		&--item
+			margin-right 5px
+			padding 15px 0
+		&--link
+			font-size 1em
+	.adv__row
+		justify-content center
+	.adv__item
+		margin-bottom 25px
+		&--img
+			width 150px
+			height 150px
+	.footer
+		.social__list
+			&--item
+				margin-right 10px
+		&__list
+			margin-bottom 25px
+	
+	.address
+		padding-top 25px
+		border-top 1px solid #717171
+			
++max-screen(767px)
+	body
+		font-size 12px
+	
+	.box
+		padding 30px 0
+		
+	// Main page
+	.social__list
+		text-align center
+		margin-bottom 10px
+	.menu__list
+		text-align center
+	.header
+		&__info
+			padding 15px 0
+	.logo
+		&__img
+			margin 0 auto
+		&__descr
+			text-align center
+	.phones
+		margin-top 20px
+		
+	.nav
+		position relative
+		padding 10px 0
+		text-align right
+		&__list
+			position absolute
+			top 100%
+			left 0
+			width 100%
+			text-align center
+			z-index 10
+			background-color $accent-color
+			display none
+			&--dropdown
+				display none !important
+			&--item
+				display block
+				border-bottom 1px solid $light-color
+				&:last-child
+					border-bottom 0
+	.hamburger
+		display inline-block
+	.sect__banner 
+		.swiper-container 
+			.swiper-slide
+				background-position center center
+				.slide__row
+					max-width 100%	
+	.choice__cat--item
+		margin-bottom 25px
+	.sect__seo
+		p
+			margin-bottom 25px
+	.sect__news 
+		.btn
+			margin-top  0
+	.article__item
+		padding-bottom 25px
+		margin-bottom 25px
+		border-bottom 1px solid $accent-color
+	.sect__subscribe
+		text-align center
+	.footer
+		text-align center
+		&__list
+			text-align center
+			padding-bottom 25px
+			border-bottom 1px solid #717171
+		
+		.social__list
+			text-align center
+			
+	.address
+		padding-top 0
+		border-top none
+	
+	
+		
++max-screen(475px)
+	// Main page
+	.menu__list
+		&--item
+			padding 2px 10px
+		&--link
+			font-size 1em
+	.slider__title
+		margin-bottom 25px
+	.slider__item
+		max-width 100%
+	.slider__navigation
+		position relative
+		top auto
+		right auto
+		margin-bottom 25px
+		.owl-prev
+			margin-right 30px
+	.form__subscr
+		&--btn
+			position relative
+			top auto
+			right auto
+			border 2px solid #818181
+			margin-top 25px
+			transform none
+			padding-top 10px
+			padding-bottom 10px
+		&--input
+			padding-right 30px
+			
++max-screen(420px)
+	// Main page
+	.header__action
+		&--link
+			span:not([class='counter'])
+				display none
+		
+		

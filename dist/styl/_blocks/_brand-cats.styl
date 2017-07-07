@@ -1,0 +1,69 @@
+.brand__categories
+	&--link
+		display block
+		width 100%
+		
+		overflow hidden
+		margin-bottom 45px
+	
+	&--thumb
+		display block
+		width 170px
+		height 170px
+		position relative
+		overflow hidden
+		img
+			display block
+			width 100%
+			height 100%
+	&--title
+		text-align center
+		display block
+		margin-top 12px
+		text-transform uppercase
+		color #212121
+		font-size 1.285em
+		min-height 60px
+	
+	&--overlay
+		position absolute
+		top 0
+		left 0
+		height 100%
+		width 100%
+		background-color rgba($light-color, .75)
+		transition all .23s ease-in-out
+		opacity 0
+	
+	&--info
+		position absolute
+		width 100%
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		z-index 3
+		transition all .23s ease-in-out
+		font-size 1.285em
+		text-align center
+	
+	&:hover
+		.brand__categories
+			&--overlay
+				opacity 1
+			&--title
+				text-decoration underline
+
+
+.nickname
+
+	display block
+	width 100%
+	color #212121
+	padding-bottom 5px
+	border-bottom 1px solid #717171
+.type
+
+	display block
+	width 100%
+	padding-top 5px
+	color #717171

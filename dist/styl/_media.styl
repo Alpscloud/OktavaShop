@@ -16,6 +16,12 @@
 	
 	.adv__item--title
 		font-size 1em
+	
+	.brand__categories
+		&--link
+			margin-bottom 25px
+		&--thumb
+			margin 0 auto
 
 
 +max-screen(1000px)
@@ -120,6 +126,7 @@
 			z-index 10
 			background-color $accent-color
 			display none
+			
 			&--dropdown
 				display none !important
 			&--item
@@ -127,6 +134,15 @@
 				border-bottom 1px solid $light-color
 				&:last-child
 					border-bottom 0
+		&__rimpler
+			.nav__list
+				background-color $rimpler-bg
+		&__inverness
+			.nav__list
+				background-color $inverness-bg
+		&__isabelle
+			.nav__list
+				background-color $isabelle-bg
 	.hamburger
 		display inline-block
 	.sect__banner 
@@ -203,6 +219,14 @@
 	.title__offset
 		margin-top 30px
 		
+
+	// Brands
+	.brand__logo
+		img
+			display block
+			max-width 250px
+			margin 0 auto 20px auto
+		
 +max-screen(620px)
 	.row__hidden
 		display block
@@ -237,6 +261,11 @@
 			padding-bottom 10px
 		&--input
 			padding-right 30px
+			
+	// Brands
+	.brand__categories--thumb
+		width 120px
+		height 120px
 			
 +max-screen(420px)
 	// Main page

@@ -111,3 +111,66 @@ textarea:-ms-input-placeholder
 
 	font-family $Reg
 	color #717171
+
+
+// Product
+.select
+	display inline-block
+	border none
+	border-bottom 1px solid #dad5d5
+	color $dark-color
+	font 1em $Reg
+	transition all .23s ease-in-out
+	&:focus,
+	&:hover
+		outline none
+		border-color $accent-color
+		
+
+.quantity__input
+	position relative
+	max-width 90px
+	display inline-block
+	vertical-align middle
+	overflow hidden
+	input
+		width 100%
+		height 30px
+		text-align center
+		padding 0 30px 0 30px
+		font 1.285em $Reg
+		color #2f2f2f
+		line-height 25px
+		outline none
+		transition all .23s ease-in-out
+		display inline-block
+		
+		&::-webkit-outer-spin-button
+		&::-webkit-inner-spin-button 
+			appearance none
+			margin 0
+		&:focus
+			border-color $accent-color
+		&:hover
+			border-color $accent-color
+	.btn__quantity
+		color #2f2f2f
+		width 29px
+		height 29px
+		background-color $light-bg
+		border 1px solid #e8e8e8
+		color $dark-color
+		display block
+		position absolute
+		top 0
+		transition all .23s ease-in-out
+		font 1.5em $Reg
+		&:hover
+			background $accent-color
+			color $light-color
+		&.plus
+			right 0
+		&.minus
+			left 0	
+			
+	

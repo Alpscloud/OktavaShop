@@ -24,38 +24,7 @@ window.addEventListener('DOMContentLoaded', function() {
 // ============================================================
 
 // ========= ========= ========= JQUERY =========== ========= =========
-// $(document).ready(function() {
-// 		(function($){				
-// 	jQuery.fn.lightTabs = function(options){
 
-// 		var createTabs = function(){
-// 			tabs = this;
-// 			i = 0;
-			
-// 			showPage = function(i){
-// 				$(tabs).find('.tabs__content').children('div').hide();
-// 				$(tabs).find('.tabs__content').children('div').eq(i).show();
-// 				$(tabs).find(".tabs__list").children('li').removeClass("active");
-// 				$(tabs).find(".tabs__list").children('li').eq(i).addClass("active");
-// 			}
-								
-// 			showPage(0);				
-			
-// 			$(tabs).find(".tabs__list").children('li').each(function(index, element){
-// 				$(element).attr("data-page", i);
-// 				i++;                        
-// 			});
-			
-// 			$(tabs).find(".tabs__list").children('li').click(function(){
-// 				showPage(parseInt($(this).attr("data-page")));
-// 			});				
-// 		};		
-// 		return this.each(createTabs);
-// 	};	
-// })(jQuery);
-
-// $(".tabs").lightTabs();
-// });
 $(document).ready(function() {
 	//  ========= M a i n   v a r i a b l e s =========
 	var html = $('body').width();
@@ -128,10 +97,16 @@ $(document).ready(function() {
 	// Contact Tabs
 
 	$('.js-tab-content').not(":first").hide();
+	$('.js-product-tab-content').not(":first").hide();
 
 	$(".js-tab-btn").click(function() {
 		$(".js-tab-btn").removeClass("active").eq($(this).index()).addClass("active");
 		$(".js-tab-content").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
+
+	$(".js-product-tab-btn").click(function() {
+		$(".js-product-tab-btn").removeClass("active").eq($(this).index()).addClass("active");
+		$(".js-product-tab-content").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("active");
 
 	$('.js-tab-btn').click(function() {
@@ -141,6 +116,34 @@ $(document).ready(function() {
 	});
 	// ========= =========== =========== ===========
 
+	// ========= Product slider ===========
+	$('.bxslider').bxSlider({
+  		pagerCustom: '#bx-pager',
+  		adaptiveHeight: true,
+  		nextText: '',
+  		prevText: ''
+	});
+	// ========= =========== =========== ===========
+	// ========= Quantity input ===========
+	$('.quantity__input').on('click', function(event) {
+		var input = $(this).find('.js-quantity-input'),
+			value = input.val(),
+			target = $(event.target);
+		
+		if(target.attr('data-action') === 'plus') {
+			value++;
+			input.val(value);
+			
+
+		} else if(target.attr('data-action') === 'minus') {	
+			if(input.val() <= 0) {return};
+			value--;	
+			input.val(value);
+			
+		}
+
+	});
+	// ========= =========== =========== ===========
 
 	// ========= O w l   c a r o u s e l ===========
 

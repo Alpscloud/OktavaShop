@@ -118,4 +118,66 @@
 		color #b8b8b8
 		font-family $Reg
 		text-decoration line-through
-	
+		
+
+// Single slider
+.slider__wrapp
+	position relative
+	.unit
+		right 0
+		left auto
+		z-index 1
+.slider__thumbs
+	a
+		display block
+		width 100px
+		height 100px
+		padding 5px
+		position relative
+		text-align center
+		overflow hidden
+		&:hover
+			background-color $light-bg
+		&.active
+			background-color $light-bg
+		img
+			display inline-block
+			max-width 40px
+			
+.bx-wrapper
+	border none
+	padding 20px 5px 5px 5px
+	background-color $light-bg
+	position relative
+	text-align center
+	box-shadow none
+	margin-bottom 0
+	img
+		width auto
+		max-width 100%
+		display inline-block
+		margin 0 auto
+.bx-wrapper 
+	.bx-controls-direction 
+		a
+			display inline-block
+			width 26px
+			height 43px
+			opacity .5
+			background url('../img/icons/svg/arrow-slider-ic.svg') center no-repeat
+			&:hover
+				opacity 1
+			&.bx-prev
+				transform rotate(-180deg)
+				
+// .bxslider
+// 	display block
+// 	height 100%
+// 	li
+// 		height 100%
+// 		position relative
+// 		img
+// 			position absolute
+// 			top 50%
+// 			left 50%
+// 			transform translate(-50%, -50%)

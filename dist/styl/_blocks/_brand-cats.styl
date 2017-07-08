@@ -1,7 +1,6 @@
 .brand__categories
 	&--link
 		display block
-		
 		overflow hidden
 		margin-bottom 45px
 		&:hover
@@ -58,7 +57,27 @@
 		font-size 1.285em
 		text-align center
 	
-	
+.cat__list	
+	position absolute
+	width 100%
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)
+	z-index 3
+	transition all .23s ease-in-out
+	font-size 1.285em
+	text-align center
+	&--item
+		display block
+		padding 3px 0
+		border-bottom 1px solid #717171
+		&:last-child
+			border-bottom none
+	&--link
+		color #717171
+		display block
+		&:hover
+			color #212121	
 
 
 .nickname

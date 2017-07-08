@@ -20,6 +20,8 @@
 			transform translateY(-50%)
 			font-size 2em
 			display none
+		&--products
+			display none
 		
 	&__list
 		padding-left 25px
@@ -36,3 +38,28 @@
 				text-decoration underline
 			&:hover
 				text-decoration underline
+	
+	&__products
+		.aside__list
+			padding-left 0
+			&--item
+				
+				margin-bottom 0
+				&:first-child
+					margin-top 0
+				
+			&--link
+				display block
+				padding 12px 25px
+				text-transform uppercase
+				color #717171
+				transition all .15s ease-in-out
+				&:hover
+					background-color $light-bg
+					color #2f2f2f
+					text-decoration none
+				&.active
+					background-color $light-bg
+					color #2f2f2f
+					text-decoration none
+				

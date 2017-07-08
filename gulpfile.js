@@ -57,6 +57,29 @@ gulp.task('styl', function() {
 		.pipe(gulp.dest('./dist/css/'));
 });
 
+gulp.task('css', function() {
+	return gulp.src('./dist/styl/main.styl')
+		.pipe(stylus({
+			linenos: false
+		}))
+			.on('error', function(err) {
+				console.log(err.message);
+				this.end();
+			})
+		.pipe(concatCss('style.css'))
+		.pipe(autoprefixer([
+			'Android 2.3',
+			'Android >= 4',
+			'Chrome >= 20',
+			'Firefox >= 24',
+			'Explorer >= 8',
+			'iOS >= 6',
+			'Opera >= 12',
+			'Safari >= 6'
+		]))
+		.pipe(gulp.dest('./dist/css/'));
+});
+
 
 
 // Concat + compress + rename css LIBS files
@@ -103,6 +126,7 @@ gulp.task('buildLibs', ['cssLibs', 'jsLibs']);
 // Watch task
 gulp.task('watch', function() {
 	gulp.watch("./dist/styl/**/*.styl", ['styl']);
+	gulp.watch("./dist/styl/**/*.styl", ['css']);
 	gulp.watch("./dist/js/common.js", ['jsCommon']);
 	gulp.watch('./dist/css/libs/*.css', ['cssLibs']);
 });

@@ -22,6 +22,14 @@
 			margin-bottom 25px
 		&--thumb
 			margin 0 auto
+			
+	// Product line
+	.filter__item
+		margin-right 10px
+	.product__wrapp
+		justify-content space-around
+		.item
+			margin-bottom 25px
 
 
 +max-screen(1000px)
@@ -83,6 +91,13 @@
 			margin-bottom 5px
 		&--link
 			display inline-block
+			
+	// Product line
+	.product__wrapp
+		justify-content space-between
+		.item
+			width 210px
+			flex 0 0 220px
 			
 +max-screen(991px)
 	.address
@@ -226,7 +241,13 @@
 			display block
 			max-width 250px
 			margin 0 auto 20px auto
-		
+	
+	.aside__title--products
+		display block
+	// Pagination
+	.pagination
+		&__list
+			text-align center
 +max-screen(620px)
 	.row__hidden
 		display block
@@ -266,11 +287,18 @@
 	.brand__categories--thumb
 		width 120px
 		height 120px
+		
+	// Proucts line
+	.product__wrapp
+		justify-content center
+		flex-direction column
+		align-items center
 			
 +max-screen(420px)
 	// Main page
 	.header__action
 		&--link
+			height 40px
 			span:not([class='counter'])
 				display none
 		

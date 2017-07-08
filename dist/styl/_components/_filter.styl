@@ -1,1 +1,41 @@
 @import '../_helpers/_vars.styl'
+
+.filter
+	display flex
+	align-items center
+	justify-content space-between
+	flex-wrap wrap
+	margin-bottom 20px
+	padding 13px 20px
+	background-color $light-bg
+	&__item
+		display inline-block
+		margin-right 20px
+		&:last-child
+			margin-right 0
+		&--title
+			color #2f2f2f
+			font-size .9em
+			display inline-block
+			vertical-align middle
+	&__select
+		display inline-block
+		vertical-align middle
+		border 1px solid transparent
+		background-color transparent
+		transition all .23s ease-in-out
+		position relative
+		font-size .9em
+		color #717171
+		&:focus,
+		&:hover
+			border-color $accent-color
+		&:focus,
+		&:active
+			outline none
+	
+	&__counter
+		color #717171
+		ont-size .9em
+		display inline-block
+		vertical-align middle

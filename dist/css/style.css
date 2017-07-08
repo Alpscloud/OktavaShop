@@ -2039,6 +2039,51 @@ textarea:-ms-input-placeholder {
   vertical-align: middle;
 }
 
+.filter__item--link {
+  position: relative;
+  padding-left: 25px;
+}
+
+.filter__item--link svg {
+  -webkit-transition: all 0.23s ease-in-out;
+  -o-transition: all 0.23s ease-in-out;
+  transition: all 0.23s ease-in-out;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  left: 0;
+}
+
+.filter__item--link--buy {
+  color: #b0d028;
+}
+
+.filter__item--link--buy svg {
+  fill: #b0d028;
+}
+
+.filter__item--link--delete {
+  color: #9a9a9a;
+}
+
+.filter__item--link--delete svg {
+  fill: #9a9a9a;
+}
+
+.filter__item--link:hover {
+  color: #f31683;
+}
+
+.filter__item--link:hover svg {
+  fill: #f31683;
+}
+
 .filter__select {
   display: inline-block;
   vertical-align: middle;
@@ -3214,6 +3259,14 @@ textarea:-ms-input-placeholder {
     -webkit-flex: 0 0 220px;
         -ms-flex: 0 0 220px;
             flex: 0 0 220px;
+  }
+
+  .filter__block {
+    margin-bottom: 10px;
+  }
+
+  .filter__block:last-child {
+    margin-bottom: 0;
   }
 }
 

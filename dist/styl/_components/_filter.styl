@@ -18,6 +18,33 @@
 			font-size .9em
 			display inline-block
 			vertical-align middle
+		&--link
+			position relative
+			padding-left 25px
+			svg
+				transition all .23s ease-in-out
+				display inline-block
+				position absolute
+				top 50%
+				transform translateY(-50%)
+				width 20px
+				height 20px
+				left 0
+			&--buy
+				color $accent-color
+				svg
+					fill $accent-color
+				
+			&--delete
+				color #9a9a9a
+				svg
+					fill #9a9a9a
+			&:hover
+				color $primary-color
+				svg
+					fill $primary-color
+				
+				
 	&__select
 		display inline-block
 		vertical-align middle

@@ -3384,6 +3384,10 @@ textarea:-ms-input-placeholder {
   margin-bottom: 20px;
 }
 
+.product__header .product__title {
+  width: 70%;
+}
+
 .product__cat {
   text-transform: uppercase;
   color: #a7a7a7;
@@ -3402,8 +3406,16 @@ textarea:-ms-input-placeholder {
 .product__title {
   text-transform: uppercase;
   color: #212121;
-  font: 1.857em 'GothamProBold', Arial, sans-serif;
-  width: 70%;
+  font-size: 1.857em;
+  font-family: 'GothamProBold', Arial, sans-serif;
+}
+
+.product__title a {
+  color: inherit;
+}
+
+.product__title a:hover {
+  text-decoration: underline;
 }
 
 .product__price {
@@ -3592,6 +3604,77 @@ textarea:-ms-input-placeholder {
   color: #2f2f2f;
 }
 
+.basket__row {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 40px;
+}
+
+.basket__row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.basket__info .product__title {
+  font-size: 1.14em;
+}
+
+.basket__info .slider__action {
+  margin-top: 0;
+}
+
+.basket__price {
+  color: #2f2f2f;
+  font-size: 1.285em;
+  font-family: 'GothamProBold', Arial, sans-serif;
+}
+
+.basket__price--single {
+  font-family: 'GothamProRegular', Arial, sans-serif;
+}
+
+.basket__price span {
+  display: inline-block;
+  margin-left: 45px;
+}
+
+.basket__total {
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+.basket__total .basket__price {
+  margin-bottom: 30px;
+}
+
+.basket__total .basket__price span {
+  margin-left: 12px;
+}
+
+.basket__total .btn {
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+
+.product__units {
+  margin: 15px 0 50px 0;
+  color: #707070;
+}
+
+.product__units span {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.product__units p {
+  margin-bottom: 15px;
+}
+
+.product__units p:last-child {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 1200px) {
   .nav__list--item {
     margin-right: 20px;
@@ -3744,6 +3827,19 @@ textarea:-ms-input-placeholder {
 
   .slider__thumbs a {
     display: inline-block;
+  }
+
+  .basket__img {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .basket__img img {
+    width: 30%;
+  }
+
+  .product__units {
+    margin-bottom: 25px;
   }
 }
 
@@ -3983,6 +4079,26 @@ textarea:-ms-input-placeholder {
 
   .product__tabs--wrapp {
     margin: 20px 0;
+  }
+
+  .basket__info .slider__action {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .basket__price {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .basket__price span {
+    margin-left: 10px;
+  }
+
+  .basket__price--single {
+    margin-top: 0;
+    font-size: 1.5em;
   }
 }
 

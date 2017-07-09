@@ -8,6 +8,8 @@
 		border-bottom 1px solid $light-sect-bg
 		text-align left
 		margin-bottom 20px
+		.product__title
+			width 70%
 		
 	&__cat
 		text-transform uppercase
@@ -22,8 +24,12 @@
 	&__title
 		text-transform uppercase
 		color #212121
-		font 1.857em $Bold
-		width 70%
+		font-size 1.857em 
+		font-family $Bold
+		a
+			color inherit
+			&:hover
+				text-decoration underline
 	
 	&__price
 		color $accent-color

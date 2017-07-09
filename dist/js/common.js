@@ -73,6 +73,27 @@ $(document).ready(function() {
 	});
 	// ========= =========== =========== ===========
 
+	// Popup
+
+	$('.overlay').on('click',function() {
+		$(this).fadeOut(300);
+		$('.popup').fadeOut(300);
+	});
+	$('.close').on('click',function() {
+		$('.overlay').fadeOut(300);
+		$('.popup').fadeOut(300);
+	});
+
+	$('.js-popup-reg-btn').on('click', function() {
+		$('.overlay').fadeIn(300);
+		$('.js-popup-registration').fadeIn(300);
+	});
+
+	$('.js-popup-enter-btn').on('click', function() {
+		$('.overlay').fadeIn(300);
+		$('.js-popup-enter').fadeIn(300);
+	});
+
 	// ========= Banner Slider ===========
 	var swiper = new Swiper('.swiper-container', {
 

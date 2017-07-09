@@ -1355,12 +1355,41 @@ img {
 .btn__more {
   background-color: #b0d028;
   padding: 8px 22px;
-  border: 2px solid #b0d028;
+  border: 3px solid #b0d028;
 }
 
 .btn__more:hover {
   color: #b0d028;
   background-color: transparent;
+}
+
+.btn__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.btn__forget {
+  color: #454545;
+  border-bottom: 1px dotted #454545;
+  font: 1em 'GothamProRegular', Arial, sans-serif;
+}
+
+.btn__forget:hover {
+  color: #b0d028;
+  border-color: #b0d028;
 }
 
 .btn__up {
@@ -1470,6 +1499,57 @@ img {
   -webkit-animation: arrows 1.5s infinite;
        -o-animation: arrows 1.5s infinite;
           animation: arrows 1.5s infinite;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0,0,0,0.5);
+  z-index: 15;
+  top: 0;
+  left: 0;
+  display: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 630px;
+  background-color: #fff;
+  z-index: 20;
+  padding: 80px 30px 30px 30px;
+  text-align: center;
+  display: none;
+}
+
+.popup__title {
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e6e6e6;
+  font: 1.285em 'GothamProBold', Arial, sans-serif;
+  color: #717171;
+}
+
+.close {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/icons/svg/close-ic.svg") center no-repeat;
+  z-index: 25;
+  cursor: pointer;
 }
 
 @-webkit-keyframes arrows {
@@ -1724,6 +1804,10 @@ textarea:-ms-input-placeholder {
 
 .quantity__input .btn__quantity.minus {
   left: 0;
+}
+
+.input__block {
+  margin: 40px 0;
 }
 
 .social__list {
@@ -3169,7 +3253,7 @@ textarea:-ms-input-placeholder {
 .compare__table--td {
   padding: 10px;
   color: #2f2f2f;
-  width: 20%;
+  width: 260px;
   text-align: center;
 }
 

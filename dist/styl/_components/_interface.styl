@@ -36,10 +36,22 @@ $mwidth = 300px
 	&__more
 		background-color $accent-color
 		padding 8px 22px
-		border 2px solid $accent-color
+		border 3px solid $accent-color
 		&:hover
 			color $accent-color
 			background-color transparent
+	&__row
+		display flex
+		justify-content space-between
+		align-items center
+		flex-wrap wrap	
+	&__forget
+		color #454545
+		border-bottom 1px dotted #454545
+		font 1em $Reg
+		&:hover
+			color $accent-color
+			border-color $accent-color
 	&__up
 		display none
 		border-radius 50%
@@ -112,3 +124,54 @@ $mwidth = 300px
 	to 
 		transform translateX(-100%) rotate(-135deg)
 		opacity 0
+		
+
+.overlay
+	width 100%
+	height 100%
+	position fixed
+	background rgba($dark-color, .50)
+	z-index 15
+	top 0
+	left 0
+	display none
+	transition all .3s ease-in-out
+	// visibility hidden
+	// opacity 0
+	// &.active
+	// 	z-index 15
+	// 	opacity 1
+	// 	visibility visible
+		
+
+.popup
+	position fixed
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)
+	width 100%
+	max-width 630px
+	background-color $light-color
+	z-index 20
+	padding 80px 30px 30px 30px
+	text-align center
+	display none
+	&__title
+		text-transform uppercase
+		padding-bottom 5px
+		border-bottom 1px solid $light-sect-bg
+		font 1.285em $Bold
+		color #717171
+
+	
+
+.close
+	display inline-block
+	position absolute
+	top 20px
+	right 20px
+	width 20px
+	height 20px
+	background url('../img/icons/svg/close-ic.svg') center no-repeat
+	z-index 25
+	cursor pointer

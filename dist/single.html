@@ -43,6 +43,54 @@
 	<!-- CONTENT WRAPPER -->
 	<div class="content_wrapper">
 
+		<!-- Overlay -->
+		<div class="overlay"></div>
+		<!-- //Overlay -->
+
+		<!-- Popup registration -->
+		<div class="popup js-popup-registration">
+			<button type="button" class="close"></button>
+			<div class="popup__item">
+				<h3 class="popup__title">Введите свои данные</h3>
+				<form class="form form__popup">
+					<div class="input__block">
+						<input type="email" placeholder="E-mail" class="form__feedback--input">
+						<input type="text" placeholder="Пароль" class="form__feedback--input">
+					</div>
+
+					<div class="btn__row">
+						<button class="btn btn__more" type="button">Войти</button>
+						<button class="btn btn__buy" type="button">Регистрация</button>
+						<button class="btn__forget" type="button">Восстановить пароль</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+		<!-- //Popup registration -->
+
+		<!-- Popup enter -->
+		<div class="popup js-popup-enter">
+			<button type="button" class="close"></button>
+			<div class="popup__item">
+				<h3 class="popup__title">Введите свои данные 2</h3>
+				<form class="form form__popup">
+					<div class="input__block">
+						<input type="email" placeholder="E-mail" class="form__feedback--input">
+						<input type="text" placeholder="Пароль" class="form__feedback--input">
+					</div>
+
+					<div class="btn__row">
+						<button class="btn btn__more" type="button">Войти</button>
+						<button class="btn btn__buy" type="button">Регистрация</button>
+						<button class="btn__forget" type="button">Восстановить пароль</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+		<!-- //Popup enter -->
+
 		<!-- Btn up -->
 		<button type="button" class="btn__up"></button>
 		<!-- //Btn up -->
@@ -67,8 +115,8 @@
 								<li class="menu__list--item"><a href="contacts.html" class="menu__list--link">Контакты</a></li>
 								<li class="menu__list--item"><a href="blog.html" class="menu__list--link">Блог</a></li>
 								<li class="menu__list--item"><a href="delivery.html" class="menu__list--link">Доставка и оплата</a></li>
-								<li class="menu__list--item"><button type="button" class="menu__list--link">Регистрация</button></li>
-								<li class="menu__list--item"><button type="button" class="menu__list--link">Вход</button></li>
+								<li class="menu__list--item"><button type="button" class="menu__list--link js-popup-reg-btn">Регистрация</button></li>
+								<li class="menu__list--item"><button type="button" class="menu__list--link js-popup-enter-btn">Вход</button></li>
 							</ul>
 						</div>
 					</div>
@@ -279,7 +327,7 @@
 									<div class="product__info--row">
 										<div class="quantity">									
 											<div class="quantity__input">
-												<input type="number" class="quaintity__item js-quantity-input"  min="0" placeholder="1" name="product quantity" id="quantity">
+												<input type="number" class="quaintity__item js-quantity-input"  min="0"  name="product quantity" id="quantity" value="1">
 												<button type="button" class="btn__quantity minus js-quantity-btn" data-action="minus">-</button>
 												<button type="button" class="btn__quantity plus js-quantity-btn" data-action="plus">+</button>
 											</div>

@@ -2352,6 +2352,86 @@ textarea:-ms-input-placeholder {
   vertical-align: middle;
 }
 
+.aside__filter {
+  padding: 30px 17px;
+  background-color: #fafafa;
+  text-align: left;
+}
+
+.aside__filter--item {
+  position: relative;
+}
+
+.aside__filter--block {
+  margin-bottom: 25px;
+}
+
+.aside__filter--block:last-child {
+  margin-bottom: 0;
+}
+
+.aside__filter--title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  background-color: #fafafa;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #e6e6e6;
+  cursor: pointer;
+}
+
+.aside__filter--title:after {
+  content: '';
+  right: 0;
+  top: 50%;
+  position: absolute;
+  pointer-events: none;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: inline-block;
+  width: 8px;
+  height: 6px;
+  background: url("../img/icons/select-arrow.png") center no-repeat;
+}
+
+.aside__filter--select {
+  font-size: 0.9em;
+  display: block;
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 26px;
+  display: block;
+  width: 100%;
+  background: transparent;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.aside__filter--select::-webkit-outer-spin-button,
+.aside__filter--select::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+
+.aside__filter--text {
+  margin-top: 12px;
+  color: #c6c4c5;
+}
+
+.aside__filter--text.active {
+  color: #000;
+}
+
 .breadcrumbs__list {
   padding: 20px 0;
   margin-bottom: 20px;
@@ -4099,6 +4179,14 @@ textarea:-ms-input-placeholder {
   .basket__price--single {
     margin-top: 0;
     font-size: 1.5em;
+  }
+
+  .aside__filter--select {
+    height: 23px;
+  }
+
+  .aside__filter {
+    margin-bottom: 30px;
   }
 }
 

@@ -66,3 +66,65 @@
 		ont-size .9em
 		display inline-block
 		vertical-align middle
+		
+
+.aside
+	&__filter
+		padding 30px 17px
+		background-color $light-bg
+		text-align left
+		&--item
+			position relative
+		&--block
+			margin-bottom 25px
+			&:last-child
+				margin-bottom 0
+		&--title
+			position absolute
+			top 0
+			left 0
+			width 100%
+			display block
+			pointer-events none
+			background-color $light-bg
+			padding-bottom 3px
+			border-bottom 1px solid $light-sect-bg
+			cursor pointer
+			&:after
+				content ''
+				right 0
+				top 50%
+				position absolute
+				pointer-events none
+				cursor pointer
+				transform translateY(-50%)
+				display inline-block
+				width 8px
+				height 6px
+				background url('../img/icons/select-arrow.png') center no-repeat
+		&--select
+			font-size .9em
+			display block
+			width 100%
+			border-top none
+			border-left none
+			border-right none
+			height 26px
+			display block
+			width 100%
+			
+	
+			background transparent
+			outline none
+			box-shadow none
+			&::-webkit-outer-spin-button
+			&::-webkit-inner-spin-button 
+				appearance none
+				margin 0
+				
+		&--text
+			margin-top 12px
+			color #c6c4c5
+			&.active
+				color $dark-color
+		

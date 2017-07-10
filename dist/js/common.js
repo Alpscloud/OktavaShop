@@ -72,7 +72,13 @@ $(document).ready(function() {
 	
 	});
 	// ========= =========== =========== ===========
+	$('.aside__filter--select').on('change', function() {
+		 $(this).next().text($(this).val()).addClass('active');
+		 if($(this).val() === 'Не выбрано') {
+		 	$(this).next().removeClass('active');
+		 }
 
+	});
 	// Popup
 
 	$('.overlay').on('click',function() {

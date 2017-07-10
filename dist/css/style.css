@@ -4263,6 +4263,19 @@ textarea:-ms-input-placeholder {
                 -ms-grid-row-align: center;
             align-items: center;
   }
+
+  .btn__row {
+    display: block;
+  }
+
+  .btn__row .btn {
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  .btn__row .btn:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 420px) {

@@ -30,6 +30,11 @@
 		justify-content space-around
 		.item
 			margin-bottom 25px
+			
+	.aside__filter--price--block
+		margin-bottom 10px
+		&:last-child
+			margin-bottom 0
 
 
 +max-screen(1000px)
@@ -325,6 +330,16 @@
 	
 	.aside__filter
 		margin-bottom 30px
+		
+
+	.aside__filter--price
+		justify-content start
+		&--block
+			margin-bottom 0
+			margin-right 15px
+			&:last-child
+				margin-right 0
+		
 		
 +max-screen(620px)
 	.row__hidden

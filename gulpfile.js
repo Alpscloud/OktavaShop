@@ -138,19 +138,18 @@ gulp.task('watch', function() {
 // Moves html file from DIST folder to APP folder
 gulp.task('htmlBuild', function () {
 	return gulp.src('./dist/*.html')
-		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('./app/'));
 });
 
 // Moves main css file from DIST/CSS folder to APP/CSS folder
 gulp.task('cssBuild', function () {
-	return gulp.src('./dist/css/**/*.min.css')
+	return gulp.src(['./dist/css/**/*.min.css','./dist/css/**/*.css'])
 		.pipe(gulp.dest('./app/css/'));
 });
 
 // Moves js files from DIST/JS folder to APP/JS folder
 gulp.task('jsBuild', function () {
-	return gulp.src('./dist/js/**/*.min.js')
+	return gulp.src(['./dist/js/**/*.min.js', './dist/js/**/*.js'])
 		.pipe(gulp.dest('./app/js/'));
 });
 
